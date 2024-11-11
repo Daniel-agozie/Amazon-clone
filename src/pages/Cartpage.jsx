@@ -1,10 +1,11 @@
-import CartFeatures from "../components/cart/CartFeatures";
+import CartNavbar from "../components/cart/CartNavbar";import CartFeature from "../components/cart/CartFeature";
+
 
 const Cartpage = () => {
   return (
-    <div className="flex">
-      <CartFeatures />
-      <div className="mt-3">Checkout (3 items)</div>
+    <div>
+      <CartNavbar />
+      <CartFeature />
     </div>
   )
 }

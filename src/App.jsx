@@ -6,7 +6,7 @@ import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+<Route>
         <Route path="/" element={<Homepage />} />
         <Route path="/cart" element={<Cartpage />} />
         <Route path="*" element={<Notfoundpage />} />

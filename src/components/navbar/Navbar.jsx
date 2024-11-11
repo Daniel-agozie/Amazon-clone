@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 import Amazonlogo from "./amazonlogo";
+import Amazonmobilelogo from "./Amazonmobilelogo";
 
 const Navbar = () => {
+
   return (
     <div className="bg-gray-800 fixed mb-96 w-full h-20 top-0 flex items-center">
       <Amazonlogo />
-      <NavLink to="/">
-        <img className="h-14 m-5 block sm:hidden" src="src/assets/images/amazon-mobile-logo.png" />
-      </NavLink>
+      <Amazonmobilelogo />
       <div className="flex flex-1 items-center justify-center">
       <input type="text" className="flex flex-1 rounded-xl sm:w-10 placeholder-gray-800 placeholder-opacity-75 h-9 outline-none font-bold ml-4 max-w-3xl" placeholder="search" />
 
@@ -17,7 +17,8 @@ const Navbar = () => {
       </div>
 
       <div className="flex">
-        <NavLink className="flex flex-col items-center justify-center mx-6 text-white" to="/orders">
+        <NavLink className='flex flex-col items-center justify-center mx-6 text-white'
+         to="/orders">
         <p className="text-sm font-bold">Return</p>
         <p className="text-sm font-bold">& Orders</p>
         </NavLink>

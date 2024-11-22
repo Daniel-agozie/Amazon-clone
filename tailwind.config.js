@@ -14,6 +14,9 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      gridTemplateColumns : {
+        'gridcols' : '1fr 350px',
+      },
     },
   },
   variants: {

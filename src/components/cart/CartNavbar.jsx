@@ -7,9 +7,8 @@ const CartNavbar = () => {
     <Amazonlogo />
     <Amazonmobilelogo />
     <div className="block m-auto">
-      <div className="flex justify-center"> Checkout (3 items)</div>
+      <div className="flex justify-center font-bold text-lg italic"> Checkout (3 items)</div>
     </div>
-    
   </div>
   )
 }

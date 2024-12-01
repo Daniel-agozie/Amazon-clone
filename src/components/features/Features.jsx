@@ -1,11 +1,12 @@
-import { useState,useEffect } from "react"
+import { useState,useEffect,useContext } from "react"
 import Spinner from "../spinner"
-import Cart from "../../data/Cart"
+import SellIcon from '@mui/icons-material/Sell';
 
-const Features = () => {
+const Features = ({AddToCart}) => {
   const [button, setButton] = useState(new Map())
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
+
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -41,9 +42,6 @@ const Features = () => {
       }, 1000)
   }
 
-
-
-
   return (  
   <div className="mt-10">
     {loading ? (<Spinner loading={loading} />) : (
@@ -51,7 +49,7 @@ const Features = () => {
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6"> 
 
           {products.map((product) => (    
-            <div className="pt-16 px-5 pb-10 flex flex-col border items-center text-xs font-bold" key={product.key}>
+            <div className="pt-16 px-5 pb-10 flex flex-col border items-center text-xs font-bold" key={product.key} id={product.key}>
               <div className="flex justify-center items-center mb-2">
                 <img className="w-full mb-4 h-20" src={product.image} alt = {product.name}/>
               </div>
@@ -86,7 +84,13 @@ const Features = () => {
           
                 
               <div className="mt-5">
-                <button className="bg-yellow-400 rounded-xl w-32 text-xs hover:bg-yellow-300 p-2" data-poduct-key = "${product.key}" onClick={() => showButton(product.key)}>Add to Cart</button>
+                <button className="bg-yellow-400 rounded-3xl w-32 text-xs hover:bg-yellow-300 p-2" 
+                onClick={() => {
+                  showButton(product.key)
+                  AddToCart(product,product.id)
+                }
+              }
+                > Add to Cart</button>
               </div>
               
           </div>
@@ -99,6 +103,7 @@ const Features = () => {
   </div>
 
   )
+
 
 }
 

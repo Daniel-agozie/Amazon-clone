@@ -3,11 +3,12 @@ import CartFeature from "../components/cart/CartFeature";
 
 
 
-const Cartpage = () => {
+const Cartpage = ({addCarts}) => {
+ 
   return (
     <div>
       <CartNavbar />
-      <CartFeature />
+      <CartFeature addCarts={addCarts}/>
     </div>
   )
 }

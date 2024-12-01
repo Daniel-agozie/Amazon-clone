@@ -1,21 +1,27 @@
 import produts from "../../data/products.json"
 import CartPayment from "./cartPayment";
 
-const CartFeature = () => {
+
+const CartFeature = ({addCarts}) => {
+    
   
   return (
     <div>
       <div className="ml-2 mt-12 font-bold text-3xl italic">Review Your Order</div>
       
       <div className="grid grid-cols-gridcols md:grid-cols-1">
-        <div className="flex flex-1 ml-4 mt-4 border-4 p-8">
+
+        {addCarts.map((cart, index) => {
+          console.log(cart);
+          
+          <div className="flex flex-1 ml-4 mt-4 border-4 p-8" key={index} id={index}>
           <div className="w-20">
-          <img className="w-24 mt-3" src="src/assets/images/products/athletic-cotton-socks-6-pairs.jpg" />
+          <img className="w-24 mt-3" src={cart.image} />
           </div>
-       
+        
           <div className="ml-5">
-            <div className="font-bold italic">Black and Gray Athletic Cotton Socks - 6 Pairs</div>
-            <p className="font-bold text-red-700">$10.90</p>
+            <div className="font-bold italic">{cart.name}</div>
+            <p className="font-bold text-red-700"> ${(cart.priceCents /100).toFixed(2)}</p>
             <div className="flex">
               <div> Quantity: 2 </div>
               <button className="ml-2 text-blue-700">Update</button>
@@ -56,6 +62,8 @@ const CartFeature = () => {
           </div>
         </div>
       </div>
+    })}
+ 
 
       <CartPayment />
       </div>

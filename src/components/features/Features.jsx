@@ -1,12 +1,13 @@
-import { useState,useEffect,useContext } from "react"
+import { useState,useEffect,useContext } from "react";
+import { AddCartContent } from "../../data/cartContent";
 import Spinner from "../spinner"
-import SellIcon from '@mui/icons-material/Sell';
 
-const Features = ({AddToCart}) => {
+const Features = () => {
   const [button, setButton] = useState(new Map())
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
+  const {AddToCart} = useContext(AddCartContent)
 
   useEffect(() => {
     const fetchProduct = async () => {

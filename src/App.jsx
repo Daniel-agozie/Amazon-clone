@@ -2,11 +2,12 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider} f
 import Homepage from "./pages/Homepage";
 import Cartpage from "./pages/Cartpage";
 import Notfoundpage from "./pages/Notfoundpage";
-import CartContent from "./data/cartContent";
+import Cart from "./data/Cart"
   
 
 
 const App = () => {
+  
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -15,20 +16,20 @@ const App = () => {
           <Route path="/cart" element={<Cartpage />} />
           <Route path="*" element={<Notfoundpage />} />
       </Route>
-    )
+    
 
     
       // <Route>
       //     <Route path="/" element={<Homepage AddToCart={AddToCart}/>} />
-      //     <Route path="/cart" element={<Cartpage addCarts={addCart}/>} />
+      //     <Route path="/cart" element={<Cartpage addCart={addCart}/>} />
       //     <Route path="*" element={<Notfoundpage />} />
       // </Route>
-    );
+   ) );
   return (
     
-    <CartContent>
+    <Cart>
       <RouterProvider router={router} />
-    </CartContent>
+    </Cart>
   )
 }
 

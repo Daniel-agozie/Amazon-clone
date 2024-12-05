@@ -1,17 +1,19 @@
-import produts from "../../data/products.json"
+import { useContext } from "react";
 import CartPayment from "./cartPayment";
+import { AddCartContent } from "../../data/Cart"
 
 
-const CartFeature = ({addCarts}) => {
+const CartFeature = () => {
     
-  
+  const {addCart} = useContext(AddCartContent);
+
   return (
     <div>
       <div className="ml-2 mt-12 font-bold text-3xl italic">Review Your Order</div>
       
       <div className="grid grid-cols-gridcols md:grid-cols-1">
 
-        {addCarts.map((cart, index) => {
+        {addCart.map((cart, index) => {
           console.log(cart);
           
           <div className="flex flex-1 ml-4 mt-4 border-4 p-8" key={index} id={index}>

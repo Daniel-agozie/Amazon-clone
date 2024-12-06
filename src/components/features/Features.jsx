@@ -1,13 +1,13 @@
-import React,{ useState,useEffect,useContext } from "react";
-import { AddCartContext } from "../../Context/ContextProvider";
+import React,{ useState,useEffect ,useContext} from "react";
 import Spinner from "../spinner"
+import { AddContext } from "../../Context/ContextProvider";
 
 const Features = () => {
   const [button, setButton] = useState(new Map())
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
-  const {AddToCart} = useContext(AddCartContext);
+  const {AddToCart} = useContext(AddContext)
 
   useEffect(() => {
     const fetchProduct = async () => {

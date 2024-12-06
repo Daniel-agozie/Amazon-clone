@@ -1,12 +1,12 @@
 import Navbar from "../components/navbar/Navbar";
 import Features from "../components/Features/Features";
 
-const Homepage = ({AddToCart}) => {
+const Homepage = () => {
 
   return (
     <div>
       <Navbar />
-      <Features AddToCart={AddToCart}/>
+      <Features />
     </div>
   )
 }

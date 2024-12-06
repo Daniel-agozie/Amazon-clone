@@ -1,11 +1,12 @@
-import { useContext } from "react";
 import CartPayment from "./cartPayment";
-import { AddCartContext } from "../../Context/ContextProvider"
+import { useContext} from "react";
+import { AddContext } from "../../Context/ContextProvider";
 
 
 const CartFeature = () => {
+
+  const {addCart} = useContext(AddContext)
     
-  const {addCart} = useContext(AddCartContext);
 
   return (
     <div>

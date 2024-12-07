@@ -3,7 +3,7 @@ import { useState,createContext } from "react";
 export const AddContext = createContext();
 
 const ContextProvider = ({children}) => {
-  const [addCart, setAddCart] = useState([]);
+  let [addCart, setAddCart] = useState([]);
 
 const AddToCart = (item) => {
   
@@ -20,8 +20,11 @@ const AddToCart = (item) => {
     } else{
       return [...prevCart, {...item, quantity:1}]
     }
-  })  
+  });
+  
 }
+
+
   return (
     <div>
       <AddContext.Provider value={{addCart,AddToCart}}>

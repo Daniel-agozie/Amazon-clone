@@ -2,7 +2,7 @@
 
 const CartPayment = () => {
   return (
-    <div className="border-4 px-10 py-10">
+    <div className="border-4 px-10 ml-6 mr-5 container py-10 h-full">
       <div className="font-bold mb-3">Order Summary</div>
 
 

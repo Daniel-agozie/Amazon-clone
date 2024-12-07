@@ -1,8 +1,12 @@
 import { NavLink } from "react-router-dom";
 import Amazonlogo from "./amazonlogo";
 import Amazonmobilelogo from "./Amazonmobilelogo";
+import { useContext } from "react";
+import { AddContext } from "../../Context/ContextProvider";
 
 const Navbar = () => {
+
+  const {addCart} = useContext(AddContext)
 
   return (
     <div className="bg-gray-800 fixed mb-96 w-full h-20 top-0 flex items-center italic">
@@ -27,7 +31,7 @@ const Navbar = () => {
       <NavLink className="flex items-center text-white 
         border-2 hover:border-white border-transparent px-1 py-1 transition-all duration-700 rounded-lg" to="/cart">
         <div className="relative">
-          <p className="absolute left-10 top-2 right-24 text">0</p>
+          <p className="absolute left-10 top-2 right-24 text">{addCart.length}</p>
           <img className="w-18" src="src/assets/images/icons/cart-icon.png"/>
         </div>
         <p className="mr-7 font-bold text-sm">cart</p>

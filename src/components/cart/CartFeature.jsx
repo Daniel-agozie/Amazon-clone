@@ -11,13 +11,13 @@ const CartFeature = () => {
     <div>
       <div className="ml-2 mt-12 font-bold text-3xl italic">Review Your Order</div>
       
-      <div className="grid grid-cols-gridcols md:grid-cols-1">
-
+      <div className="grid grid-cols-grid">
+      <div className="flex flex-col" >
         {addCart.length === 0 ? (<p>Cart empty</p>)
         :(
           addCart.map((cart) => {
             return (
-              <div className="flex flex-1 ml-4 mt-4 border-4 p-8" key={cart.id} id={cart.id} >
+              <div className="flex flex-1 ml-4 mt-4 border-4 p-8 container" key={cart.id} id={cart.id} >
               <div className="w-20">
               <img className="w-24 mt-3" src={cart.image} />
               </div>
@@ -26,7 +26,7 @@ const CartFeature = () => {
                 <div className="font-bold italic">{cart.name}</div>
                 <p className="font-bold text-red-700"> ${(cart.priceCents /100).toFixed(2)}</p>
                 <div className="flex">
-                  <div> Quantity: 2 </div>
+                  <div> Quantity: {cart.quantity} </div>
                   <button className="ml-2 text-blue-700">Update</button>
                   <button className="ml-2 text-blue-700">Delete</button>
                 </div>
@@ -69,9 +69,7 @@ const CartFeature = () => {
        
       }))}
         
-  
- 
-
+      </div>
       <CartPayment />
       </div>
     </div>

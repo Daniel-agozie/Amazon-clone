@@ -6,8 +6,6 @@ import Notfoundpage from "./pages/Notfoundpage";
 
 const App = () => {
   
-
-  
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
@@ -18,12 +16,6 @@ const App = () => {
     
     ));
     
-//     <Route>
-//     <Route path="/" element={<Homepage AddToCart={AddToCart}/>} />
-//     <Route path="/cart" element={<Cartpage addCart={addCart}/>} />
-//     <Route path="*" element={<Notfoundpage />} />
-// </Route>
-   
   return (
     <>
       <RouterProvider router={router} />

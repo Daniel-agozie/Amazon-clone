@@ -14,8 +14,8 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
-      gridTemplateColumns : {
-        'gridcols' : '1fr 350px',
+      gridtempelateRows :{
+        "grid": "200px minmax(900px, 1fr) 100px",
       },
     },
   },

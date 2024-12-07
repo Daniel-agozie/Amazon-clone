@@ -15,12 +15,6 @@ const App = () => {
     
     ));
     
-//     <Route>
-//     <Route path="/" element={<Homepage AddToCart={AddToCart}/>} />
-//     <Route path="/cart" element={<Cartpage addCart={addCart}/>} />
-//     <Route path="*" element={<Notfoundpage />} />
-// </Route>
-   
   return (
     <>
       <RouterProvider router={router} />

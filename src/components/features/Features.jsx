@@ -89,7 +89,7 @@ const Features = () => {
                 <button className="bg-yellow-400 rounded-3xl w-32 text-xs hover:bg-yellow-300 p-2" 
                 onClick={() => {
                   showButton(product.key)
-                  AddToCart(product,product.id)
+                  AddToCart(product)
                 }
               }
                 > Add to Cart</button>

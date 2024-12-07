@@ -1,12 +1,9 @@
 import { Route,createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router-dom";
-import React,{useState} from "react";
 import Homepage from "./pages/Homepage";
 import Cartpage from "./pages/Cartpage";
 import Notfoundpage from "./pages/Notfoundpage";
 
 const App = () => {
-  
-
   
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,6 +24,7 @@ const App = () => {
   return (
     <>
       <RouterProvider router={router} />
+
     </>
   )
 }

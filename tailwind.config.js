@@ -14,8 +14,8 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
-      gridtempelateRows :{
-        "grid": "200px minmax(900px, 1fr) 100px",
+      gridtempelateColums :{
+        'custom': '100px 1fr 1fr',
       },
     },
   },

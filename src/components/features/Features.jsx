@@ -1,5 +1,5 @@
 import React,{ useState,useEffect ,useContext} from "react";
-import Spinner from "../spinner"
+import Spinner from "../Spinner"
 import { AddContext } from "../../Context/ContextProvider";
 
 const Features = () => {

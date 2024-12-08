@@ -3,15 +3,17 @@ import { useState,createContext } from "react";
 export const AddContext = createContext();
 
 const ContextProvider = ({children}) => {
-  let [addCart, setAddCart] = useState([]);
+  const [addCart, setAddCart] = useState([]);
+
 
 const AddToCart = (item) => {
   
   setAddCart((prevCart) => {
     const matchingProduct = prevCart.find((cartItem) => {
       return cartItem.id === item.id
+      
     });
-    
+
     if (matchingProduct) {
       return prevCart.map((cartItem) => {
        return cartItem.id === item.id ? {...cartItem, quantity: cartItem.quantity + 1}
@@ -21,8 +23,9 @@ const AddToCart = (item) => {
       return [...prevCart, {...item, quantity:1}]
     }
   });
-  
+ 
 }
+
 
 
   return (

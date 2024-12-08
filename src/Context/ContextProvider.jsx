@@ -6,6 +6,7 @@ const ContextProvider = ({children}) => {
   const [addCart, setAddCart] = useState([]);
 
 
+
 const AddToCart = (item) => {
   
   setAddCart((prevCart) => {
@@ -25,8 +26,6 @@ const AddToCart = (item) => {
   });
  
 }
-
-
 
   return (
     <div>

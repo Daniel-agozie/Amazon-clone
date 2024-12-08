@@ -7,12 +7,12 @@ import DeliverySelection from "./DeliverySelection";
 const CartFeature = () => {
 
 
-  const {addCart} = useContext(AddContext)
+  const {addCart,deliveryOption} = useContext(AddContext)
 
   return (
     <div className="mr-auto ml-auto">
       <div className="ml-2 mt-12 font-bold text-3xl italic">Review Your Order</div>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 items-start mr-3">
       <div className="flex flex-col" >
         {addCart.length === 0 ? ""
@@ -40,14 +40,14 @@ const CartFeature = () => {
                 <div className="mb-3 ml-7">Choose a delivery Option:</div>
                 <DeliverySelection />
             </div>
-            <div className="whitespace-nowrap">Delivery Date</div>
+
           </div>
 
            </div>
             )
        
       }))}
-        
+
       </div>
       <CartPayment />
       </div>

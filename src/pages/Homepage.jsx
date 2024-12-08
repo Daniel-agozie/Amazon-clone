@@ -1,5 +1,5 @@
 import Navbar from "../components/navbar/Navbar";
-import Features from "../components/Features/Features";
+import Features from "../components/features/Features";
 
 const Homepage = () => {
 

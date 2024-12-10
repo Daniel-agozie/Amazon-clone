@@ -5,6 +5,7 @@ const CartPayment = () => {
 
   const {addCart} = useContext(AddContext);
 
+
   return (
     <div>
     {addCart.length === 0 ? "": (
@@ -13,7 +14,7 @@ const CartPayment = () => {
 
 
         <div className="grid grid-cols-2 mb-2">
-          <div>Items(3):</div>
+          <div>Items({addCart.length}):</div>
           <div className="text-right">$42.75</div>
         </div>
 

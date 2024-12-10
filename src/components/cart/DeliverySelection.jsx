@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 import { useState} from "react";
 
 
-const DeliverySelection = ({productId}) => {
+const DeliverySelection = () => {
   const [deliveryOption, setDeliveryOption] = useState(null);
 
    const deliverySelections = [
@@ -37,6 +37,7 @@ const handleDeliveryOption = (id) => {
   setDeliveryOption(selectedDeliveryOption)
 }
 
+
   return (
     <div>
       {deliverySelections.map((deliverySelection) => {
@@ -45,11 +46,10 @@ const handleDeliveryOption = (id) => {
             
           <div className="flex">
             <input type="radio" 
-            name={`deliveryOption-${productId}-${deliverySelection.id}`}
             checked={deliveryOption?.id === deliverySelection.id} 
             onChange={() => handleDeliveryOption(deliverySelection.id)}/>
 
-            <div className="ml-3">
+            <div className="ml-3 text-3xl sm:text-xs">
               <div>{showDate(deliverySelection.deliveryDays)}</div>
               <div>
                 Arrive in  {deliverySelection.deliveryDays} {deliverySelection.deliveryDays === 1 ? "Day" : "Days"}
@@ -68,7 +68,7 @@ const handleDeliveryOption = (id) => {
         )
       })}
 
-        <div className="whitespace-nowrap">Delivery Date               {deliveryOption ? (<div>Date :{showDate(deliveryOption.deliveryDays)}</div>) : (<div>select one option</div>)}</div>
+        <div className="whitespace-nowrap sm:text-sm text-2xl">Delivery Date {deliveryOption ? (<div>Date :{showDate(deliveryOption.deliveryDays)}</div>) : (<div>select one option</div>)}</div>
             </div>
   )
 }

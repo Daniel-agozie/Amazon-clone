@@ -40,17 +40,18 @@ const handleDeliveryOption = (id) => {
 
   return (
     <div>
+
       {deliverySelections.map((deliverySelection) => {
        return (
-          <div className="ml-8 mb-5" key={deliverySelection.id} id={deliverySelection.id}>
+          <div className="-ml-8 mb-5" key={deliverySelection.id} id={deliverySelection.id}>
             
           <div className="flex">
             <input type="radio" 
             checked={deliveryOption?.id === deliverySelection.id} 
             onChange={() => handleDeliveryOption(deliverySelection.id)}/>
 
-            <div className="ml-3 text-3xl sm:text-xs">
-              <div>{showDate(deliverySelection.deliveryDays)}</div>
+            <div className="ml-3 text-3xl sm:text-xs text-gray-500">
+              <div className="text-green-800 font-bold whitespace-nowrap ">{showDate(deliverySelection.deliveryDays)}</div>
               <div>
                 Arrive in  {deliverySelection.deliveryDays} {deliverySelection.deliveryDays === 1 ? "Day" : "Days"}
               </div>
@@ -67,9 +68,9 @@ const handleDeliveryOption = (id) => {
 
         )
       })}
+<div className="whitespace-nowrap font-bold sm:text-sm text-2xl -ml-28 text-green-600">{deliveryOption ?  (<div> Delivery Date:{showDate(deliveryOption.deliveryDays)}</div>) : (<div>select one option</div>)}</div>
 
-        <div className="whitespace-nowrap sm:text-sm text-2xl">Delivery Date {deliveryOption ? (<div>Date :{showDate(deliveryOption.deliveryDays)}</div>) : (<div>select one option</div>)}</div>
-            </div>
+</div>
   )
 }
 

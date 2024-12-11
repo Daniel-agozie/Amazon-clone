@@ -5,7 +5,11 @@ const CartPayment = () => {
 
   const {addCart} = useContext(AddContext);
 
+  const total = addCart.reduce((acc, cart) => {
+     return acc + (cart.priceCents * cart.quantity) / 100
+  },0)
 
+  
   return (
     <div>
     {addCart.length === 0 ? "": (
@@ -15,7 +19,7 @@ const CartPayment = () => {
 
         <div className="grid grid-cols-2 mb-2">
           <div>Items({addCart.length}):</div>
-          <div className="text-right">$42.75</div>
+          <div className="text-right">${total.toFixed(2)}</div>
         </div>
 
         <div className="grid grid-cols-2 mb-2">

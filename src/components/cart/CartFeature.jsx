@@ -22,25 +22,26 @@ const CartFeature = () => {
             return (
               <div className="flex flex-1 ml-4 mt-4 p-8 border-4 rounded mb-4" key={cart.id} id={cart.id} >
              
-              <div className="grid grid-cols-3 gap-5">
+              <div className="grid grid-cols-3">
               <img className="w-20" src={cart.image} />
        
-              <div className="ml-5 sm:text-lg text-4xl">
-                <div className=" mb-5">{cart.name}</div>
+              <div className="sm:text-sm text-3xl">
+                <div className="mb-5 font-bold mr-4">{cart.name}</div>
                 <div className="font-bold text-red-700"> ${(cart.priceCents /100).toFixed(2)}</div>
-                <div className="mt-2 font-bold">
+                <div className="mt-5 flex sm:text-sm">
                   <span> Quantity:<span>{cart.quantity}</span> </span>
-                </div>
-                  <div className="mt-4 -ml-2 font-bold italic cursor-pointer">
-                  <span className="ml-2 text-blue-700">Update</span>
-                  <span className="ml-2 text-blue-700"
+               
+                  <div className="cursor-pointer">
+                  <span className="ml-2">Update</span>
+                  <span className="ml-2"
                    onClick = {() => removeFromCart(cart.id)}
                   >Delete</span>
                   </div>
+                  </div>
               </div>
            
-              <div className="italic text-sm">
-                <div className="mb-3 ml-7">Choose a delivery Option:</div>
+              <div className="text-sm ml-9">
+                <div className="mb-3 -ml-7 font-bold whitespace-nowrap">Choose a delivery Option:</div>
                 <DeliverySelection />
             </div>
 

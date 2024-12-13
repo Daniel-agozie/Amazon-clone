@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { useContext } from "react"
 import { AddContext } from "../../Context/ContextProvider"
 
@@ -41,10 +42,9 @@ const CartPayment = () => {
           <div>Order Total:</div>
           <div className="text-right">$52.51</div>
         </div>
-
+        <NavLink to="/orders">
           <button className="bg-yellow-400 text-sm rounded-lg font-bold w-full pt-3 pb-2 mt-2 mb-2">Place Your order</button>
-    
-
+        </NavLink>
 
     </div>
     )}

@@ -4,6 +4,7 @@ import { useState} from "react";
 
 const DeliverySelection = () => {
   const [deliveryOption, setDeliveryOption] = useState(null);
+  const [selectedPrice,setSelectedPrice] = useState(0)
 
    const deliverySelections = [
     {
@@ -35,7 +36,25 @@ const handleDeliveryOption = (id) => {
   const selectedDeliveryOption = deliverySelections.find((option) => option.id === id)
    
   setDeliveryOption(selectedDeliveryOption)
+  setSelectedPrice(selectedDeliveryOption.priceCents)
+
+  // setSelectedPrice((prev) => ({
+  //   ...prev,
+  //   [id]:
+  //   selectedDeliveryOption.priceCents
+  // }))
+ 
 }
+
+console.log(selectedPrice);
+
+
+// const totalPrice = Object.values(selectedPrice).reduce((acc,price) => {
+//   return (acc + price) / 100
+// },0)
+
+// console.log(totalPrice);
+
 
 
   return (
@@ -68,7 +87,7 @@ const handleDeliveryOption = (id) => {
 
         )
       })}
-<div className="whitespace-nowrap font-bold sm:text-sm text-2xl -ml-28 text-green-600">{deliveryOption ?  (<div> Delivery Date:{showDate(deliveryOption.deliveryDays)}</div>) : (<div>select one option</div>)}</div>
+<div className="whitespace-nowrap font-bold sm:text-sm text-2xl -ml-28 text-green-900">{deliveryOption ?  (<div> Delivery Date: {showDate(deliveryOption.deliveryDays)}</div>) : (<div>select one option</div>)}</div>
 
 </div>
   )

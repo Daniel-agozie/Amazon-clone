@@ -1,12 +1,17 @@
 import CartPayment from "./CartPayment";
 import { useContext} from "react";
 import { AddContext } from "../../Context/ContextProvider";
-import DeliverySelection from "./DeliverySelection";
+// import DeliverySelection from "./DeliverySelection";
 import CartEmpty from "./CartEmpty";
+import dayjs from "dayjs"
 
 
 const CartFeature = () => {
-  const {addCart,removeFromCart} = useContext(AddContext)
+  const {addCart,removeFromCart} = useContext(AddContext);
+
+  const today = dayjs();
+  const now = today.format("dddd, MMMM D")
+  console.log(now)
 
   return (
     <div className="mr-auto ml-auto">
@@ -14,15 +19,18 @@ const CartFeature = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 items-start mr-3">
       <div className="flex flex-col" >
+
         {addCart.length === 0 ? <CartEmpty />
         :(
           addCart.map((cart) => {  
       
             return (
-              <div className="flex flex-1 ml-4 mt-4 p-8 border-4 rounded mb-4 animate-slideup" key={cart.id} id={cart.id} >
-             
-              <div className="grid grid-cols-3">
-              <img className="w-20" src={cart.image} />
+              <div className="flex ml-4 mt-4 p-8 border-4 rounded mb-4 animate-slideup" key={cart.id} id={cart.id}>
+              
+              <div className="block">{now}</div>
+
+              <div className="grid grid-cols-2">
+                <img className="w-20" src={cart.image} />
        
               <div className="sm:text-sm text-3xl">
                 <div className="mb-5 font-bold mr-4">{cart.name}</div>
@@ -39,10 +47,10 @@ const CartFeature = () => {
                   </div>
               </div>
            
-              <div className="text-sm ml-9">
+              {/* <div className="text-sm ml-9">
                 <div className="mb-3 -ml-7 font-bold whitespace-nowrap">Choose a delivery Option:</div>
                 <DeliverySelection />
-            </div>
+            </div> */}
 
           </div>
 

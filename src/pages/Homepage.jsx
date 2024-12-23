@@ -1,12 +1,15 @@
 import Navbar from "../components/navbar/Navbar";
 import Features from "../components/features/Features";
+import Spinner from "../components/Spinner";
 
 const Homepage = () => {
 
   return (
     <div>
-      <Navbar />
-      <Features />
+      {/* <Spinner/> */}
+        <Navbar />
+        <Features />
+
     </div>
   )
 }

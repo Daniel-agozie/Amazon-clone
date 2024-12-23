@@ -7,10 +7,11 @@ const ContextProvider = ({children}) => {
   const [button, setButton] = useState(new Map())
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
+  const [orders, setOrders] = useState([]);
 
 
 const AddToCart = (product) => {
-  
+
   setAddCart((prevCart) => {
     const matchingProduct = prevCart.find((cartItem) => {
       return cartItem.id === product.id
@@ -26,6 +27,8 @@ const AddToCart = (product) => {
       return [...prevCart, {...product, quantity:1}]
     }
   });
+
+
  
 }
 
@@ -74,9 +77,14 @@ useEffect(() => {
   fetchProduct();
 }, [setProducts])
 
+const AddOrders = () => {
+  setOrders(addCart)
+  
+}
+
   return (
     <div>
-      <AddContext.Provider value={{addCart,AddToCart,removeFromCart,button,showButton,products,loading}}>
+      <AddContext.Provider value={{addCart,AddToCart,removeFromCart,button,showButton,products,loading,orders,AddOrders}}>
         {children}
       </AddContext.Provider>
     </div>

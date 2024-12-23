@@ -6,7 +6,6 @@ const Orderpage = () => {
   return (
     <div>
       <TrackItems />
-      <Spinner />
     </div>
   )
 }

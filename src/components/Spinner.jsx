@@ -20,11 +20,27 @@
 
 // export default Spinner;
 
-import React from 'react'
+import { stepButtonClasses } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 
 const Spinner = () => {
 
+  // const [visible,setVisible] = useState()
+
+  // useEffect(() => {
+  //   const timer = setTimeout(()=> {
+  //     setVisible(false)
+  //   },3000)
+
+  //   return () => clearTimeout(timer)
+  // },[])
+
+  // if (!visible) {
+  //   return null
+  // }
+
   return (
+    
     <div className='h-screen bg-yellow-900'>
       <div className='flex justify-center items-center h-screen font-bold animate-sliderightto'>
         <img className='w-12 h-10 rounded-full mr-2 animate-rotate' src='src/assets/images/images (1).jpeg'/>

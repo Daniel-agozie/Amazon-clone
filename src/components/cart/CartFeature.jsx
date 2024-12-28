@@ -27,18 +27,18 @@ const CartFeature = () => {
             return (
               <div className="flex ml-4 mt-4 p-8 border-4 rounded mb-4 animate-slideup" key={cart.id} id={cart.id}>
               
-              <div className="block">{now}</div>
+              <div className="flex flex-col font-bold md:text-sm text-2xl">Ordered Date: <span>{now}</span></div>
 
               <div className="grid grid-cols-2">
                 <img className="w-20" src={cart.image} />
        
-              <div className="sm:text-sm text-3xl">
+              <div className="md:text-sm text-3xl">
                 <div className="mb-5 font-bold mr-4">{cart.name}</div>
                 <div className="font-bold text-red-700"> ${(cart.priceCents /100).toFixed(2)}</div>
-                <div className="mt-5 flex sm:text-sm">
+                <div className="mt-5 flex md:text-sm">
                   <span> Quantity:<span>{cart.quantity}</span> </span>
                
-                  <div className="cursor-pointer text-blue-600 font-bold">
+                  <div className="cursor-pointer text-blue-600 font-bold md:text-sm text-2xl">
                   <span className="ml-2">Update</span>
                   <span className="ml-2"
                    onClick = {() => removeFromCart(cart.id)}

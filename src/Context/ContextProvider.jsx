@@ -27,9 +27,6 @@ const AddToCart = (product) => {
       return [...prevCart, {...product, quantity:1}]
     }
   });
-
-
- 
 }
 
 const removeFromCart = (itemFromCart) => {

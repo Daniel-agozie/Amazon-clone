@@ -27,17 +27,17 @@ const Navbar = () => {
       <div className="flex mr-4">
         <NavLink className="flex flex-col justify-center text-white border-2 hover:border-white border-transparent px-1 py-1 transition-all duration-700 rounded-lg"
          to="/orders">
-        <span className="sm:text-sm text-4xl font-bold">Return</span>
-        <span className="sm:text-sm text-3xl font-bold">& Orders</span>
+        <span className="md:text-sm text-3xl font-bold">Return</span>
+        <span className="md:text-sm text-2xl font-bold">& Orders</span>
         </NavLink>
 
       <NavLink className="flex items-center text-white 
         border-2 hover:border-white border-transparent px-1 py-1 transition-all duration-700 rounded-lg relative" to="/cart">
           
           <img className="" src="src/assets/images/icons/cart-icon.png"/>
-          <div className="absolute top-3 left-11">{addCart.length}</div>
+          <div className="absolute top-3 left-11 md:text-sm text-2xl">{addCart.length}</div>
 
-        <div className="mr-4 font-bold text-5xl sm:text-sm">cart</div>
+        <div className="mr-4 font-bold text-5xl md:text-sm">cart</div>
         </NavLink>
       </div>
 

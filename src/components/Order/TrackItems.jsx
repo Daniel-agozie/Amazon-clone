@@ -21,7 +21,7 @@ const TrackItems = () => {
                 <img className='w-16 ml-4 mb-4' src={order.image}/>
                   <div className='ml-7'>
                     <div className='font-bold text-lg'>{order.name.slice(0,30)}</div>
-                    <div>Arriving on: May 2</div>
+                    <div>Arriving on: may 2</div>
                     <div>Quantity : {order.quantity}</div>
                   </div>
                 <div className='mr-4 flex flex-1 justify-end h-10'>

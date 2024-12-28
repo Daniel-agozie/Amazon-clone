@@ -27,20 +27,20 @@ const Features = () => {
                 <img className="w-full mb-4 h-20" src={product.image} alt = {product.name}/>
               </div>
  
-              <div className="sm:text-sm text-3xl line-clamp-2">{product.name}</div>
+              <div className="md:text-sm text-3xl line-clamp-2">{product.name}</div>
 
             <div className="flex flex-col items-center mt-2 gap-2">
               <div className="flex items-center"> 
-                <img className="sm:w-14 w-28 mr-2" src={`src/assets/images/ratings/rating-${product.rating.stars * 10}.png`}/>
-                <div className="sm:text-xs text-3xl">{product.rating.count}</div>
+                <img className="md:w-14 w-28 mr-2" src={`src/assets/images/ratings/rating-${product.rating.stars * 10}.png`}/>
+                <div className="md:text-sm text-3xl">{product.rating.count}</div>
               </div>
 
-              <div className="sm:text-sm text-2xl">
+              <div className="md:text-sm text-3xl">
                 ${(product.priceCents /100).toFixed(2)}
               </div>
 
               <div className="border mb-6">
-                <select className="text-2xl sm:text-sm">
+                <select className="md:text-sm text-2xl">
                   {[...Array(10).keys()].map((n) => (
                       <option key={n} value={n+1}>
                         {n+1}
@@ -50,7 +50,7 @@ const Features = () => {
               </div>
               </div>
 
-              <div className="flex-1"></div>
+              <div className="flex flex-1"></div>
 
               {button.has(product.key) && (
                 <div className="flex items-center text-xs text-green-700 animate-slideright">
@@ -59,9 +59,8 @@ const Features = () => {
                 </div>
               ) } 
           
-                
-              <div className="">
-                <button className="bg-yellow-400 rounded-3xl w-full sm:text-sm text-xl sm:font-bold hover:bg-yellow-300 p-3" 
+              <div className="mt-2">
+                <button className="bg-yellow-400 rounded-lg w-full md:text-lg md:font-bold text-2xl hover:bg-yellow-300 p-2" 
                 onClick={() => {
                   showButton(product.key)
                   AddToCart(product)

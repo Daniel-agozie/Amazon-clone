@@ -1,7 +1,7 @@
 import { Route,Routes} from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Cartpage from "./pages/Cartpage";
-import Orderpage from "./Pages/Orderpage";
+import Orderpage from "../src/Pages/Orderpage";
 import Notfoundpage from "./pages/Notfoundpage";
 
 const App = () => {

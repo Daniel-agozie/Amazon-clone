@@ -1,8 +1,8 @@
-import CartPayment from "./CartPayment";
+import CartPayment from "./Cartpayment";
 import { useContext} from "react";
 import { AddContext } from "../../context/Contextprovider";
 // import DeliverySelection from "./DeliverySelection";
-import CartEmpty from "./CartEmpty";
+import CartEmpty from "./Cartempty";
 import dayjs from "dayjs"
 
 

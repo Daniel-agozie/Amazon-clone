@@ -1,5 +1,6 @@
-import CartNavbar from "../components/cart/CartNavbar";
 import CartFeature from "../components/cart/Cartfeature";
+import CartNavbar from "../components/cart/CartNavbar";
+
 
 const Cartpage = ({addCart}) => {
  

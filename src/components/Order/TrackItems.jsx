@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import {AddContext} from "../../Context/ContextProvider"
+import {AddContext} from "../../context/ContextProvider"
 import {NavLink} from "react-router-dom"
 
 const TrackItems = () => {

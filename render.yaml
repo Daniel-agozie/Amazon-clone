@@ -4,4 +4,4 @@ services:
   env: static
   staticPublishPath: build
   buildCommand: npm install && npm run build
-   startCommand: npm start
+  startCommand: npm start

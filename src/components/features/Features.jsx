@@ -1,6 +1,6 @@
 import React,{ useState,useEffect ,useContext} from "react";
 import Spinner from "../Spinner"
-import { AddContext } from "../../context/Context-provider";
+import { AddContext } from "../../context/Context";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

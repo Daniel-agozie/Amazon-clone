@@ -1,7 +1,7 @@
 import Amazonlogo from "../navbar/amazonlogo";
 import Amazonmobilelogo from "../navbar/Amazonmobilelogo";
 import { useContext } from "react";
-import { AddContext } from "../../context/Context-provider";
+import { AddContext } from "../../context/Context";
 
 const CartNavbar = () => {
   const {addCart} = useContext(AddContext)

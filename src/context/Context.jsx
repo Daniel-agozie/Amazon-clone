@@ -26,7 +26,7 @@ const AddToCart = (product) => {
     } else{
       return [...prevCart, {...product, quantity:1}]
     }
-  });0
+  });
 }
 
 const removeFromCart = (itemFromCart) => {

@@ -2,7 +2,7 @@ import CartPayment from "./Cartpayment";
 import { useContext} from "react";
 import { AddContext } from "../../context/Contextprovider";
 // import DeliverySelection from "./DeliverySelection";
-import CartEmpty from "./Cartempty";
+import CartEmpty from "./CartEmpty";
 import dayjs from "dayjs"
 
 

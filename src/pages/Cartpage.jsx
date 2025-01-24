@@ -1,4 +1,4 @@
-import CartFeature from "../components/cart/Cartfeature";
+import CartFeature from "../components/cart/CartFeature";
 import CartNavbar from "../components/cart/CartNavbar";
 
 

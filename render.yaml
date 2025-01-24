@@ -1,0 +1,6 @@
+services: 
+  typr: web
+  name: Shopping-app
+  env: static
+  staticPublishPath: build
+  buildCommand: npm install && npm run build

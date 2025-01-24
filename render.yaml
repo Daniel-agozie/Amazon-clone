@@ -1,5 +1,5 @@
 services: 
-  typr: web
+  type: web
   name: Shopping-app
   env: static
   staticPublishPath: build

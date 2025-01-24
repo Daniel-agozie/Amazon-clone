@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react"
-import { AddContext } from "../../context/Contextprovider"
+import { AddContext } from "../../context/ContextProvider"
 
 const CartPayment = () => {
 

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Amazonlogo from "./amazonlogo";
 import Amazonmobilelogo from "./Amazonmobilelogo";
 import { useContext } from "react";
-import { AddContext } from "../../context/Contextprovider";
+import { AddContext } from "../../context/ContextProvider";
 
 const Navbar = () => {
 

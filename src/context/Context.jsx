@@ -5,7 +5,7 @@ export const AddContext = createContext();
 const ContextProvider = ({children}) => {
   const [addCart, setAddCart] = useState([]);
   const [button, setButton] = useState(new Map())
-  const [products, setProducts] = useState([])
+  // const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [orders, setOrders] = useState([]);
 
@@ -58,30 +58,29 @@ function showButton(key) {
   }, 1000)
 }
 
-useEffect(() => {
-  const fetchProduct = async () => {
-    try {
-      const res = await fetch('/api/products');
-      const data = await res.json();
-      setProducts(data);
-    } catch (error) {
-      // console.log('Error in fetching data', error);
-      res.status(404).send(error.response.data);
-    } finally {
-      setLoading(false);
-    }
-  }
-  fetchProduct();
-}, [setProducts])
+// useEffect(() => {
+//   const fetchProduct = async () => {
+//     try {
+//       const res = await fetch('/api/products');
+//       const data = await res.json();
+//       setProducts(data);
+//     } catch (error) {
+//       // console.log('Error in fetching data', error);
+//       res.status(404).send(error.response.data);
+//     } finally {
+//       setLoading(false);
+//     }
+//   }
+//   fetchProduct();
+// }, [setProducts])
 
 const AddOrders = () => {
-  setOrders(addCart)
-  
+  setOrders(addCart)  
 }
 
   return (
     <div>
-      <AddContext.Provider value={{addCart,AddToCart,removeFromCart,button,showButton,products,loading,orders,AddOrders}}>
+      <AddContext.Provider value={{addCart,AddToCart,removeFromCart,button,showButton,loading,orders,AddOrders}}>
         {children}
       </AddContext.Provider>
     </div>

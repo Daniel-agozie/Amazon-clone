@@ -1,44 +1,44 @@
-{
-  "products": [
+
+ const products = [
     {
-      "key": "1",
-      "image": "src/assets/images/products/athletic-cotton-socks-6-pairs.jpg",
-      "name": "Black and Gray Athletic Cotton Socks - 6 Pairs",
-      "rating": {
-        "stars": 4.5,
-        "count": 87
+      key: "1",
+      image: "src/assets/images/products/athletic-cotton-socks-6-pairs.jpg",
+      name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+      rating: {
+        stars: 4.5,
+        count: 87
       },
-      "priceCents": 1090,
-      "keywords": [
+      priceCents: 1090,
+      keywords: [
         "socks",
         "sports",
         "apparel"
       ]
     },
     {
-      "key": "2",
-      "image": "src/assets/images/products/intermediate-composite-basketball.jpg",
-      "name": "Intermediate Size Basketball",
-      "rating": {
-        "stars": 4,
-        "count": 127
+      key: "2",
+      image: "src/assets/images/products/intermediate-composite-basketball.jpg",
+      name: "Intermediate Size Basketball",
+      rating: {
+        stars: 4,
+        count: 127
       },
-      "priceCents": 2095,
-      "keywords": [
+      priceCents: 2095,
+      keywords: [
         "sports",
         "basketballs"
       ]
     },
     {
-      "key": "3",
-      "image": "src/assets/images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-      "name": "Adults Plain Cotton T-Shirt - 2 Pack",
-      "rating": {
-        "stars": 4.5,
-        "count": 56
+      key: "3",
+      image: "src/assets/images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+      name: "Adults Plain Cotton T-Shirt - 2 Pack",
+      rating: {
+        stars: 4.5,
+        count: 56
       },
-      "priceCents": 799,
-      "keywords": [
+      priceCents: 799,
+      keywords: [
         "tshirts",
         "apparel",
         "mens"
@@ -660,4 +660,5 @@
       ]
     }
   ]
-}
+
+export default products;

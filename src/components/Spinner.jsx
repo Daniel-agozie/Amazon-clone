@@ -41,7 +41,7 @@ const Spinner = () => {
 
   return (
     
-    <div className='h-screen bg-yellow-900'>
+    <div className=' bg-yellow-900 overflow-hidden'>
       <div className='flex justify-center items-center h-screen font-bold animate-sliderightto'>
         <img className='w-12 h-10 rounded-full mr-2 animate-rotate' src='src/assets/images/images (1).jpeg'/>
         <div className='mr-2 text-white animate-sliderightto1'>M</div>

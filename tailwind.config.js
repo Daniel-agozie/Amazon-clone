@@ -17,6 +17,18 @@ module.exports = {
       '2xl':'1500px',
     },
     extend: {
+      fontFamily: {
+        playFair: ["Playfair Display", 'serif'],
+        roboto: ["Roboto", 'serif'],
+        montserrat: ["Montserrat", 'serif'],
+        Quicksand: ["Quicksand", "serif"],
+        Tangerine: [ "Tangerine", "serif"],
+        Imperial: ["Imperial Script", "serif"],
+        Chewy: ["Chewy", "serif"]
+      },
+      colors: {
+        light: '#dcdcdb',
+      },
       animation: {
         slideup: 'slideup 1s ease-in-out',
         slidedown: 'slidedown 1s ease-in-out',

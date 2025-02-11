@@ -14,7 +14,7 @@ const Navbar = () => {
       <Amazonmobilelogo />
         <div className="flex flex-1 max-w-xl min-w-min mx-6">
           <div className="flex flex-1 justify-end">
-            <input type="text" className="flex flex-1 rounded-sm placeholder-gray-800 placeholder-opacity-75 h-9 outline-none font-bold" placeholder="search" />
+            <input type="text" className="flex flex-1 rounded-sm placeholder-gray-800 placeholder-opacity-75 h-9 outline-none" placeholder="search" />
 
               <button className="bg-yellow-500 rounded-sm h-9 absolute">
                 <img className="w-6 ml-3" src="src/assets/images/icons/search-icon.png" />

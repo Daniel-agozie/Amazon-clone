@@ -3,9 +3,10 @@ import Spinner from "../Spinner"
 import { AddContext } from "../../context/Context";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import products from "../../data/products"
 
 const Features = () => {
-  const {AddToCart,button,showButton,products,loading} = useContext(AddContext);
+  const {AddToCart,button,showButton,loading} = useContext(AddContext);
 
   useEffect(() => {
     AOS.init({
@@ -16,7 +17,7 @@ const Features = () => {
 
   return (  
   <div className="mt-10">
-    {loading ? (<Spinner loading={loading} />) : (
+    {/* {loading ? (<Spinner loading={loading} />) : ( */}
       <> 
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7  2xl:grid-cols-8 mt-20" data-aos="fade-right"> 
 
@@ -75,7 +76,7 @@ const Features = () => {
        
         </div>  
       </>
-    )}
+    {/* )} */}
   </div>
 
   )

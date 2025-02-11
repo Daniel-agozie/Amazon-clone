@@ -19,7 +19,7 @@ const Features = () => {
   <div className="mt-10">
     {/* {loading ? (<Spinner loading={loading} />) : ( */}
       <> 
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7  2xl:grid-cols-8 mt-20" data-aos="fade-right"> 
+        <div className="grid grid-cols-3 xl:grid-cols-7  2xl:grid-cols-8 mt-20" data-aos="fade-right"> 
 
           {products.map((product) => (    
             <div className="pt-28 sm:pt-16 px-5 pb-10 flex flex-col border items-center text-xs " key={product.key} id={product.key}>
